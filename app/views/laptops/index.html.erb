@@ -1,0 +1,16 @@
+<table border="1">
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+		</tr>
+		<% @laptops.each do |f|%>
+		<tr>
+			<td><%= f.title %></td>
+			<td><%= f.description %></td>
+			<td><%= link_to 'show', :action =>'show', :id =>f.id %>
+			<td><%= link_to 'edit', :action => 'edit', :id => f.id %>
+			<td><%= link_to 'delete'%></td>
+			</tr>
+		<% end %>
+</table>
+<%= link_to 'new', :action => 'new'%>
